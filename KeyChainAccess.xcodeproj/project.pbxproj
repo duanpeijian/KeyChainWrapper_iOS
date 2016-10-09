@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		95F6B46A1C8DA2E400EA9A12 /* KeyChainAccess.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 95F6B4691C8DA2E400EA9A12 /* KeyChainAccess.h */; };
-		95F6B46C1C8DA2E400EA9A12 /* KeyChainAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 95F6B46B1C8DA2E400EA9A12 /* KeyChainAccess.m */; };
+		95F6B4751C8DA62700EA9A12 /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 95F6B4741C8DA62700EA9A12 /* KeychainItemWrapper.m */; };
+		95F6B47B1C8DA6FA00EA9A12 /* KeyChainWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 95F6B47A1C8DA6FA00EA9A12 /* KeyChainWrapper.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -18,7 +18,6 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				95F6B46A1C8DA2E400EA9A12 /* KeyChainAccess.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -26,8 +25,10 @@
 
 /* Begin PBXFileReference section */
 		95F6B4661C8DA2E400EA9A12 /* libKeyChainAccess.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKeyChainAccess.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		95F6B4691C8DA2E400EA9A12 /* KeyChainAccess.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyChainAccess.h; sourceTree = "<group>"; };
-		95F6B46B1C8DA2E400EA9A12 /* KeyChainAccess.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyChainAccess.m; sourceTree = "<group>"; };
+		95F6B4721C8DA46E00EA9A12 /* KeyChainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyChainWrapper.h; sourceTree = "<group>"; };
+		95F6B4731C8DA62700EA9A12 /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
+		95F6B4741C8DA62700EA9A12 /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
+		95F6B47A1C8DA6FA00EA9A12 /* KeyChainWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KeyChainWrapper.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +61,10 @@
 		95F6B4681C8DA2E400EA9A12 /* KeyChainAccess */ = {
 			isa = PBXGroup;
 			children = (
-				95F6B4691C8DA2E400EA9A12 /* KeyChainAccess.h */,
-				95F6B46B1C8DA2E400EA9A12 /* KeyChainAccess.m */,
+				95F6B4731C8DA62700EA9A12 /* KeychainItemWrapper.h */,
+				95F6B4741C8DA62700EA9A12 /* KeychainItemWrapper.m */,
+				95F6B4721C8DA46E00EA9A12 /* KeyChainWrapper.h */,
+				95F6B47A1C8DA6FA00EA9A12 /* KeyChainWrapper.mm */,
 			);
 			path = KeyChainAccess;
 			sourceTree = "<group>";
@@ -122,7 +125,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95F6B46C1C8DA2E400EA9A12 /* KeyChainAccess.m in Sources */,
+				95F6B47B1C8DA6FA00EA9A12 /* KeyChainWrapper.mm in Sources */,
+				95F6B4751C8DA62700EA9A12 /* KeychainItemWrapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,6 +216,7 @@
 		95F6B4701C8DA2E400EA9A12 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -221,6 +226,7 @@
 		95F6B4711C8DA2E400EA9A12 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
